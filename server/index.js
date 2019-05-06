@@ -7,7 +7,7 @@ var minioClient = new Minio.Client({
     port: 9000,
     useSSL: false,
     accessKey: 'XXT3LZZZ3HQN6U3AIBB8',
-    secretKey: '4GQmWzbPWPsYXCtbby4+z65rrtvjXvo3+2l'
+    secretKey: '4GQmWzbPWPsYXCtbby4+z65rrtvjXvo3+2lgM1FQ'
 });
 
 // File that needs to be uploaded.
