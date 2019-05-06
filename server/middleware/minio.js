@@ -1,11 +1,11 @@
 var Minio = require('minio');
 
 var minioClient = new Minio.Client({
-    endPoint: 'play.minio.io',
+    endPoint: 'localhost',
     port: 9000,
-    useSSL: true,
-    accessKey: 'Q3AM3UQ867SPQQA43P2F',
-    secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
+    useSSL: false,
+    accessKey: 'XXT3LZZZ3HQN6U3AIBB8',
+    secretKey: '4GQmWzbPWPsYXCtbby4+z65rrtvjXvo3+2lgM1FQ'
 });
 
 module.exports = function middleware(req, res, next) {
