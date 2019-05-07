@@ -9,8 +9,8 @@ api.use(require("./middleware/minio.js"));
 api.use(require("./middleware/db.js"));
 
 api.use("/auth", require('./route/auth.js'));
-api.use("/doc", require('./route/doc.js'));
-api.use("/user", require('./route/user.js'));
+// api.use("/doc", require('./route/doc.js'));
+// api.use("/user", require('./route/user.js'));
 
 
 api.listen(process.env.PORT);
