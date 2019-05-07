@@ -1,32 +1,16 @@
-var Minio = require('minio')
+const express = require('express');
+const bodyParser = require('body-parser');
+const api = express();
 
-// Instantiate the minio client with the endpoint
-// and access keys as shown below.
-var minioClient = new Minio.Client({
-    endPoint: 'localhost',
-    port: 9000,
-    useSSL: false,
-    accessKey: 'XXT3LZZZ3HQN6U3AIBB8',
-    secretKey: '4GQmWzbPWPsYXCtbby4+z65rrtvjXvo3+2l'
-});
+api.use(bodyParser.json());
+api.use(bodyParser.urlencoded({extended: false}));
 
-// File that needs to be uploaded.
-var file = '/root/Downloads/telegram.png'
+api.use(require("./middleware/minio.js"));
+api.use(require("./middleware/db.js"));
 
-// Make a bucket called samane.
-minioClient.makeBucket('samane', function(err) {
-    if (err) return console.log(err)
+api.use("/auth", require('./route/auth.js'));
+api.use("/doc", require('./route/doc.js'));
+api.use("/user", require('./route/user.js'));
 
-    console.log('Bucket created successfully.')
 
-    var metaData = {
-        'Content-Type': 'application/octet-stream',
-        'X-Amz-Meta-Testing': 1234,
-        'example': 5678
-    }
-    // Using fPutObject API upload your file to the bucket samane.
-    minioClient.fPutObject('samane', 'telegram.png', file, metaData, function(err, etag) {
-      if (err) return console.log(err)
-      console.log('File uploaded successfully.')
-    });
-});
+api.listen(process.env.PORT);
