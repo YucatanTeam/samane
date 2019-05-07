@@ -6,7 +6,7 @@ const api = express();
 
 
 // CORS setup
-app.use((req, res, next) => {
+api.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS')
     res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, x-access-token')
@@ -18,10 +18,10 @@ app.use((req, res, next) => {
     }
 })
 
-app.use(helmet())
+api.use(helmet())
 api.use(bodyParser.json());
 api.use(bodyParser.urlencoded({extended: false}));
-app.use(cookieSession({
+api.use(cookieSession({
     name: "session",
     keys: [
         process.env.SECRET || require('crypto').randomBytes(32).hexSlice()
