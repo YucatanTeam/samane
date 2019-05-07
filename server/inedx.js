@@ -13,6 +13,7 @@ var minioClient = new Minio.Client({
 // File that needs to be uploaded.
 var file = '/tmp/photos-europe.tar'
 
+
 // Make a bucket called europetrip.
 minioClient.makeBucket('europetrip', 'us-east-1', function(err) {
     if (err) return console.log(err)
