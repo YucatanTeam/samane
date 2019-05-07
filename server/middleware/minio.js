@@ -21,3 +21,9 @@ module.exports = function middleware(req, res, next) {
     };
     next();
 }
+
+
+// req.minio : {
+//      minios : minio connections
+//      add : add a minio instance
+// }
