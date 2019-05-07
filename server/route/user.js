@@ -7,4 +7,4 @@ user.post("/usr/add",function(req,res){
     res.send("sun");
 });
 
-module.exports={doc};
+module.exports= user;
