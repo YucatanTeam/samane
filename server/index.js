@@ -11,10 +11,10 @@ api.use((req, res, next) => {
     res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS')
     res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, x-access-token')
     if (req.method === 'OPTIONS') {
-      res.sendStatus(200)
+        res.sendStatus(200)
     }
     else {
-      next()
+        next()
     }
 })
 
@@ -34,15 +34,16 @@ api.use(cookieSession({
 const sqlConnection = require("./middleware/db.js").init();
 require("./middleware/passport.js").init({api, sql: sqlConnection.query});
 
-api.use(require("./middleware/api.js"));
+api.use(require("./middleware/api.js")(api));
 api.use(require("./middleware/minio.js"));
 api.use(require("./middleware/db.js").middleware);
 api.use(require("./middleware/passport.js").middleware);
 
 
 api.use("/auth", require('./route/auth.js'));
-// api.use("/doc", require('./route/doc.js'));
-// api.use("/user", require('./route/user.js'));
+api.use("/doc", require('./route/doc.js'));
+api.use("/user", require('./route/user.js'));
+api.use("/minio", require('./route/minio.js'));
 
 
 api.listen(process.env.PORT);
