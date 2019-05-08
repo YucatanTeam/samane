@@ -3,7 +3,7 @@ var user = app.Router();
 
 //routes will be here
 
-user.post("/usr/add",function(req,res){
+user.post("/add",function(req,res){
     res.send("sun");
 });
 
