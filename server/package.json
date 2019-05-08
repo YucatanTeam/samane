@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "PORT=3000 node index.js",
-    "dev": "PORT=3000 node ./node_modules/nodemon/bin/nodemon.js index.js"
+    "test": "node index.js",
+    "dev": "DB_HOST=localhost DB_NAME=samane DB_USER=root DB_PASS=root PORT=3000 PORT=3000 node ./node_modules/nodemon/bin/nodemon.js index.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
