@@ -46,3 +46,4 @@ api.use("/auth", require('./route/auth.js'));
 
 
 api.listen(process.env.PORT);
+console.log("api is listening on ", process.env.PORT);
