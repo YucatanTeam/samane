@@ -3,7 +3,7 @@ var user = app.Router();
 
 //routes will be here
 
-user.post("/add",function(req,res){
+muser.post("/add",function(req,res){
     res.send("sun");
 });
 
