@@ -32,7 +32,7 @@ api.use(cookieSession({
 
 
 const sqlConnection = require("./middleware/db.js").init();
-require("./middleware/passport").init({api, sql: sqlConnection.query});
+require("./middleware/passport.js").init({api, sql: sqlConnection.query});
 
 api.use(require("./middleware/api.js"));
 api.use(require("./middleware/minio.js"));

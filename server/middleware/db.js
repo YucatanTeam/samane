@@ -15,6 +15,8 @@ function init() {
     
         console.log('connected as id ' + connection.threadId);
     });
+
+    return connection;
 }
 
 function middleware(req, res, next) {
