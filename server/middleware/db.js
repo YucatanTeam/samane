@@ -20,8 +20,7 @@ function init() {
 }
 
 function middleware(req, res, next) {
-    req.sql = connection.query;
-    req.sqlConnection = connection;
+    req.sql = connection;
     next();
 }
 

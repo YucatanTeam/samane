@@ -32,7 +32,7 @@ api.use(cookieSession({
 
 
 const sqlConnection = require("./middleware/db.js").init();
-require("./middleware/passport.js").init({api, sql: sqlConnection.query});
+require("./middleware/passport.js").init({api, sql: sqlConnection});
 
 api.use(require("./middleware/api.js")(api));
 api.use(require("./middleware/minio.js"));
@@ -44,6 +44,10 @@ api.use("/auth", require('./route/auth.js'));
 api.use("/doc", require('./route/doc.js'));
 api.use("/user", require('./route/user.js'));
 api.use("/minio", require('./route/minio.js'));
+
+
+
+// TODO gracefully shutdown
 
 
 api.listen(process.env.PORT);

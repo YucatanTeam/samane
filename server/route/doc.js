@@ -3,7 +3,7 @@ var doc = app.Router();
 
 //router will be set here
 
-doc.post("/add",function(req,res){
-    res.send("sun");
+doc.get("/all",function(req,res){
+    res.send(`access granted for ${req.user.username} to all docs`);
 });
 module.exports= doc;
