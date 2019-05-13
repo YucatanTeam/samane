@@ -33,6 +33,9 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
+INSERT INTO `user` (`id`, `username`, `password`, `name`) VALUES
+(2,	'admin',	'027cfe4ec9e9a40f47efad427a0e6767{�/�\'ف��{̪��Lo����r�`p$�=�*�;R��U���*�3��&o�-Ԙڐ1T��',	NULL),
+(3,	'wildonion',	'fcc76ac1b6ec089ae2577dc6a3987cebiʧ]\n��]�y+MX~�|��r��u$\n(.j���Nn~4[�\Zywa\\(��U���֍�\\�',	NULL);
 
 DROP TABLE IF EXISTS `user_access`;
 CREATE TABLE `user_access` (
@@ -47,4 +50,4 @@ CREATE TABLE `user_access` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 
--- 2019-05-14 10:48:12
+-- 2019-05-13 19:20:47
