@@ -13,6 +13,17 @@ CREATE TABLE `access` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 
+DROP TABLE IF EXISTS `doc`;
+CREATE TABLE `doc` (
+  `id` int(8) NOT NULL AUTO_INCREMENT,
+  `shsh` text COLLATE utf8_persian_ci NOT NULL,
+  `shi` text COLLATE utf8_persian_ci NOT NULL,
+  `name` text COLLATE utf8_persian_ci NOT NULL,
+  `more` text COLLATE utf8_persian_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -36,4 +47,4 @@ CREATE TABLE `user_access` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 
--- 2019-05-07 08:25:39
+-- 2019-05-14 10:48:12
