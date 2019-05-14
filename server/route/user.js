@@ -1,7 +1,7 @@
 var app = require("express")
 var user = app.Router();
 
-//routes will be here
+// WARNING: only admin can add new user like scanner or accepter
 
 user.post("/add",function(req,res){
     res.send("sun");

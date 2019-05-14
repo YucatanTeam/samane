@@ -10,14 +10,14 @@ auth.post("/login", passport.authenticate('local', {
 auth.post("/signup", (req, res)=>{
  req.sql.query("SELECT * FROM user WHERE username = ?", [req.body.username], (err, user) => {
      if (err)
-         return res.send(err)
+         return res.json({msg: err})
      if (user.length) {
-         return res.send("user exists!")
+         return res.json({msg: "user exists!"})
      } else {
          req.hash(req.body.password, (err, saltdk) => {
              req.sql.query("INSERT INTO user ( username, password ) values ( ?, ? )", [req.body.username, saltdk], function (err, rows) {
                  req.sql.query("SELECT * FROM user WHERE username = ?", [req.body.username], (err, user) => {
-                    return res.send(`user ${user[0].username} added`);
+                    return res.json({user: user[0]});
                  })
             }) 
          });
@@ -26,12 +26,12 @@ auth.post("/signup", (req, res)=>{
 })
 
 auth.get("/login", (req,res)=>{
-    return res.send("please get login!")
+    return res.json({msg: "wrong details!"})
 })
 
 auth.get("/logout", (req, res) => {
     req.logout()
-    return res.send("successfully loggedOut")
+    return res.json({msg: "successfully loggedOut"})
 })
 
 module.exports = auth;

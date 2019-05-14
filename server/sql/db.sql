@@ -9,9 +9,13 @@ DROP TABLE IF EXISTS `access`;
 CREATE TABLE `access` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `access_name` text COLLATE utf8_persian_ci NOT NULL,
+  `description` text COLLATE utf8_persian_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
+INSERT INTO `access` (`id`, `access_name`, `description`) VALUES
+(1,	'doc_get',	'لیست پرونده های موجود'),
+(2,	'doc_add',	'ساخت پرونده جدید');
 
 DROP TABLE IF EXISTS `doc`;
 CREATE TABLE `doc` (
@@ -49,5 +53,8 @@ CREATE TABLE `user_access` (
   CONSTRAINT `user_access_ibfk_2` FOREIGN KEY (`access_id`) REFERENCES `access` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
+INSERT INTO `user_access` (`id`, `user_id`, `access_id`) VALUES
+(1,	2,	1),
+(2,	3,	2);
 
--- 2019-05-13 19:20:47
+-- 2019-05-14 10:43:56

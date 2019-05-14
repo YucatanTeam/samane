@@ -26,5 +26,5 @@ function middleware(req, res, next) {
 
 module.exports = { middleware, init, connection };
 
-// req.sql : sql query
-// req.sqlConnection : mysql connection object
+// req.sql.query : sql query
+// req.sql.connection : mysql connection object

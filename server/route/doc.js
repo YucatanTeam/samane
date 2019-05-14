@@ -1,9 +1,16 @@
-var app = require("express")
-var doc = app.Router();
+const app = require("express")
+const doc = app.Router();
+const access = require("./../middleware/access")
 
-//router will be set here
 
-doc.get("/all",function(req,res){
-    res.send(`access granted for ${req.user.username} to all docs`);
+doc.get("/all", access(["doc_get"]) , (req,res)=>{
+
+    req.sql.query("SELECT * FROM doc", (err, docs)=>{
+        if(err) return res.json({body: null, err:err})
+        return res.json({body:docs, err:null})
+    })
+
 });
-module.exports= doc;
+
+
+module.exports = doc;
