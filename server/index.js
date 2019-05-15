@@ -43,6 +43,7 @@ api.use(require("./middleware/passport.js").middleware);
 api.use("/auth", require('./route/auth.js'));
 api.use("/doc", require('./route/doc.js'));
 api.use("/user", require('./route/user.js'));
+api.use("/access", require('./route/access.js'))
 api.use("/minio", require('./route/minio.js'));
 
 

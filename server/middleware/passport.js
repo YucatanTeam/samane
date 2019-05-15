@@ -15,15 +15,22 @@ function compare(password, saltdk, cb) {
 
 function init({ api, sql }) {
     passport.use(new LocalStrategy((username, password, done) => {
-        sql.query(`SELECT * FROM user WHERE username = ?`, [username], (err, user) => {
+        sql.query(`SELECT u.id, u.username, u.password, u.name, 
+                          ac.id as access_id, ac.description, ac.access_name
+                    FROM user u 
+                        JOIN user_access u_ac ON u.id = u_ac.user_id 
+                        JOIN access ac ON ac.id = u_ac.access_id 
+                    WHERE u.username = ?`, [username], (err, user) => {
             if (err) return done(err);
             if (!user.length) {
                 return done(null, false, { message: 'Incorrect username.' });
             }
+
             compare(password, user[0].password, (err, res) => {
                 if(res) {
                     // Passwords match
                     return done(null, user[0]);
+                    
                 } else {
                     // Passwords don't match
                     return done(null, false, { message: 'Incorrect password.' });
@@ -34,7 +41,12 @@ function init({ api, sql }) {
 
     passport.serializeUser((user, done) => done(null, user.id));
     passport.deserializeUser((id, done) => {
-        sql.query(`SELECT * FROM user WHERE id = ? `, [id], (err, user) => {
+        sql.query(`SELECT u.id, u.username, u.password, u.name, 
+                          ac.id as access_id, ac.description, ac.access_name
+                    FROM user u 
+                        JOIN user_access u_ac ON u.id = u_ac.user_id 
+                        JOIN access ac ON ac.id = u_ac.access_id 
+                    WHERE u.id = ?`, [id], (err, user) => {
             done(err, user[0]);
         });
     });

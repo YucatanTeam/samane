@@ -1,4 +1,5 @@
 module.exports = (accessList) => (req, res, next) => {
-    // TODO if req.user does not have the all the accesses in access list res.status(403).send("unauthorized")
-    next();
+        if(!req.user) return res.status(401).end("Unauthorized !");
+        if(!accessList.includes(req.user.access_name)) return res.status(403).end("Access Denied !");
+        next();
 }
