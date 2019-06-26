@@ -4,7 +4,7 @@
 <template>
   <div id="wrapper">
     <!-- <img id="logo" src="~@/assets/logo.png" alt="electron-vue"> -->
-    <a class="waves-effect waves-light btn" @click="open('google.com')">button</a>
+    <a class="waves-effect waves-light btn" @click="open('https://github.com/YucatanTeam/samane')">REPO</a>
   </div>
 </template>
 
