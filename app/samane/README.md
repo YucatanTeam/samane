@@ -5,19 +5,19 @@
 #### Build Setup
 install dependencies
 ``` bash
-npm install
+$ npm install
 ```
 serve with hot reload at localhost:9080
 ```bash
-npm run dev
+$ npm run dev
 ```
 build electron application for production
 ```bash
-npm run build
+$ npm run build
 ```
 run unit & end-to-end tests
 ```bash
-npm test
+$ npm test
 
 
 ```
