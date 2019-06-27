@@ -3,18 +3,20 @@
 > samane electron vue app
 
 #### Build Setup
-
+install dependencies
 ``` bash
-# install dependencies
 npm install
-
-# serve with hot reload at localhost:9080
+```
+serve with hot reload at localhost:9080
+```bash
 npm run dev
-
-# build electron application for production
+```
+build electron application for production
+```bash
 npm run build
-
-# run unit & end-to-end tests
+```
+run unit & end-to-end tests
+```bash
 npm test
 
 
