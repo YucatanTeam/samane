@@ -1,24 +1,29 @@
 
 
 
+
 <template>
-  <div id="wrapper">
-    <!-- <img id="logo" src="~@/assets/logo.png" alt="electron-vue"> -->
-    <a class="waves-effect waves-light btn" @click="open('https://github.com/YucatanTeam/samane')">REPO</a>
-  </div>
+  
+  <card name="auth" route="/docs/person" btn_name="login" img_name="logo.png">
+    <div class="card-content">
+        <p>{{content}}</p>
+    </div>
+  </card>
+
 </template>
 
 <script>
-  // import SystemInformation from './LandingPage/SystemInformation'
+  import Card from './Tags/Card'
 
   export default {
     name: 'auth',
-    // components: { SystemInformation },
-    methods: {
-      open (link) {
-        this.$electron.shell.openExternal(link)
+    components: { Card },
+    data() {
+      return {
+        content : "this is a tesr content"
       }
-    }
+    },
+    methods: {    }
   }
 </script>
 
