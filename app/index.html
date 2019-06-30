@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<style>
-			h1 {
-				text-align: center;
-				width: 320px;
-				height: 320px;
-				background: rgb(255, 255, 255);
-				margin: 0 auto;
-			  }
-	</style>
-	<title>سامانه</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
-</head>
+	<head>
+		<title>سامانه</title>
+		<style>
+				h1 {
+					text-align: center;
+					width: 320px;
+					height: 320px;
+					background: rgb(255, 255, 255);
+					margin: 0 auto;
+				}
+		</style>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="./static/css/materialize.min.css">
+		<script scr="./static/js/jquery.js"></script>
+		<script src="./static/js/materialize.min.js"></script>
+				
+	</head>
 <body style="background-color: #E4E4E4" >
 	
-	<nav style="background-color: #f5f5f5">
-		<div class="nav-wrapper">
+	<nav style="background-color: #f5f5f5;">
+		<div class="nav-wrapper" style="margin-top: -20px">
 		</div>
 	</nav>
 
@@ -27,17 +28,57 @@
 		<div class="row">
 			
 			<div class="col s12">
-				<div class="card grey lighten-4" style="height: 150px;">
+				<div class="card grey lighten-4" style="height: 150px; border-radius: 6px;">
 					<div class="card-content">
 						<span class="card-title center-align" style="margin-top: 30px ;font-family: Sahel-Black">اطلاعات کاربری</span>
 					</div>
 				</div>
 			</div>
 
+
+
+
+
+
+	<!-- TODO hidden / show onclick using jquery -->
+			<div class="col s12">
+				<div class="card blue" style="direction:rtl; height: 250px; border-radius: 7px; margin-top: -10px; margin-bottom: 1px;">
+					<div class="card-content">
+						<div class="row">
+							<div class="hide-on-med-and-up" style="font-family: Sahel-bold">وضعیت ایثارگری</div>
+							<div class="col m8 l9 holder">
+								<div class="row">
+									<div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
+									<div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
+									<div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
+									<div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
+								</div>
+							</div>
+							<div class="col s12 m4 l3 holder hide-on-small-only" style="padding: 20px; max-width: 200px; max-height: 200px">
+								<div class="card-image">
+									<img src="./static/images/cardsicon/003-document.svg">
+									<p class="align-center" style="font-family: Sahel-bold; margin-right: 10%; padding-top: 7%;">وضعیت ایثارگری</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
 			<div class="col s12 m6 l3">
-				<div class="card grey lighten-4 hoverable">
-					<div class="card-image">
-						<img src="./static/images/cardsicon/003-document.svg">
+				<div class="card grey lighten-4 hoverable" style="border-radius: 7px;">
+					<div class="holder" style="padding: 20px">
+						<div class="card-image">
+							<img src="./static/images/cardsicon/003-document.svg">
+						</div>
 					</div>
 					<div class="card-content">
 						<p class="center-align" style="font-family: Sahel-bold">وضعیت ایثارگری</p>
@@ -46,9 +87,11 @@
 			</div>
 			
 			<div class="col s12 m6 l3">
-				<div class="card grey lighten-4 hoverable">
-					<div class="card-image">
-						<img src="./static/images/cardsicon/005-avatar.svg">
+				<div class="card grey lighten-4 hoverable" style="border-radius: 7px;">
+					<div class="holder" style="padding: 20px">
+						<div class="card-image">
+							<img src="./static/images/cardsicon/005-avatar.svg">
+						</div>
 					</div>
 					<div class="card-content">
 						<p class="center-align" style="font-family: Sahel-bold">عائله مندی و اولاد</p>
@@ -58,9 +101,11 @@
 			</div>
 
 			<div class="col s12 m6 l3">
-				<div class="card grey lighten-4 hoverable">
-					<div class="card-image">
-						<img src="./static/images/cardsicon/006-gear.svg">
+				<div class="card grey lighten-4 hoverable" style="border-radius: 7px;">
+					<div class="holder" style="padding: 20px">
+						<div class="card-image">
+							<img src="./static/images/cardsicon/006-gear.svg">
+						</div>
 					</div>
 					<div class="card-content">
 						<p class="center-align" style="font-family: Sahel-bold">دوره های آموزشی</p>
@@ -70,11 +115,13 @@
 			</div>
 
 			<div class="col s12 m6 l3">
-				<div class="card grey lighten-4 hoverable">
-					<div class="card-image">
-						<img src="./static/images/cardsicon/007-layers.svg">
+				<div class="card grey lighten-4 hoverable" style="border-radius: 7px;">
+					<div class="holder" style="padding: 20px">
+						<div class="card-image">
+							<img src="./static/images/cardsicon/007-layers.svg">
+						</div>
 					</div>
-					<div class="card-content">
+						<div class="card-content">
 						<p class="center-align" style="font-family: Sahel-bold">احکام کارگزینی</p>
 					</div>
 				</div>
