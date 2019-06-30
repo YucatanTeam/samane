@@ -4,14 +4,17 @@
   "description": "an app for automation documents of university of mazanadaran",
   "main": "main.js",
   "scripts": {
-    "dev": "electron ."
+    "start": "electron ."
   },
   "repository": "https://github.com/YucatanTeam/samane",
-  "keywords": " ",
+  "keywords": [
+    "YucatanTeam",
+    "samane"
+  ],
   "author": "YucatanTeam",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^5.0.5"
+    "electron": "5.0.6"
   },
   "dependencies": {
     "electron-reload": "^1.4.0"
