@@ -17,7 +17,7 @@ function createWindow () {
     }
   })
 
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('login_page.html')
 
   mainWindow.on('closed', function () {
     mainWindow = null
