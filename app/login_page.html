@@ -29,14 +29,17 @@
 	}
 
 .flex {
-  display: flex;
-  
+  display: flex; 
   min-height: 100vh;  /*or use calc(100vh - header_height)*/
   background-color: #F1F1F1;
   margin-bottom: -30px
 }
 .input{
-	
+	display: flex;
+}
+input.input:hover{
+	border-color: blue;
+	animation: color_change 1s;
 }
 	</style>
 
@@ -52,9 +55,25 @@
 			<div class="flex">
 				<div class="col s4 offset-s8" style="background-color: white;">
 					<div style="padding-top: 50px">
-						<h3 style="font-family: Sahel-bold;color: #B7B7B7;" class="center-align">ورود</h3>
+						<h3 style="font-family: Sahel;color: #B7B7B7;" class="center-align">ورود</h3>
+						<div class="divider"></div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="show-on-small-only">
+			<div class="center-align">
+				<h3 style="font-family: Sahel-bold;color: #B7B7B7;" class="center-align">ورود</h3>
+				<div class="divider" style="margin-left: 70px;margin-right: 70px"></div>
+				<div class="row">
+    				<form class="col s12">
+    					<div class="row">
+    						<div class="input-field col s4 offset-s4">
+    							<input type="username" name="username" class="input">
+    						</div>
+    					</div>
+    				</form>
+    			</div>
 			</div>
 		</div>
 	</div>
