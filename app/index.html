@@ -1,59 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+			h1 {
+				text-align: center;
+				width: 320px;
+				height: 320px;
+				background: rgb(255, 255, 255);
+				margin: 0 auto;
+			  }
+	</style>
 	<title>سامانه</title>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
 </head>
-<body class="" style="background-color: #E4E4E4" >
-	<h1 style="font-family: Sahel;color: white" class="text-center ">اتوماسیون دانشگاه مازندران</h1>
-	<div class="row" align="center">
-		<div class="col-6">
-		<form>
-		  <!-- Grid row -->
-		  <div class="form-group row">
-		    <!-- Default input -->
-		    <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
-		    <div class="col-sm-10">
-		      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-		    </div>
-		  </div>
-		  <!-- Grid row -->
-
-		  <!-- Grid row -->
-		  <div class="form-group row">
-		    <!-- Default input -->
-		    <label for="inputPassword3" class="col-sm-2 col-form-label"></label>
-		    <div class="col-sm-10">
-		      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-		    </div>
-		  </div>
-		  <!-- Grid row -->
-
-		  <!-- Grid row -->
-		  <div class="form-group row">
-		    <div class="col-sm-10">
-		      <button type="submit" class="btn btn-primary btn-md">Sign in</button>
-		    </div>
-		  </div>
-		  <!-- Grid row -->
-		</form>
+<body style="background-color: #E4E4E4" >
+	
+	<nav style="background-color: #f5f5f5">
+		<div class="nav-wrapper">
 		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			
+			<div class="col s12">
+				<div class="card grey lighten-4" style="height: 150px;">
+					<div class="card-content">
+						<span class="card-title center-align" style="margin-top: 30px">اطلاعات کاربری</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col s12 m6 l3">
+				<div class="card grey lighten-4">
+					<div class="card-image">
+						<img src="/root/Desktop/scripts/samane/app/static/images/cardsicon/003-document.svg">
+					</div>
+					<div class="card-content">
+						<p class="center-align">وضعیت ایثارگری</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col s12 m6 l3">
+				<div class="card grey lighten-4">
+					<div class="card-image">
+						<img src="/root/Desktop/scripts/samane/app/static/images/cardsicon/005-avatar.svg">
+					</div>
+					<div class="card-content">
+						<p class="center-align">عائله مندی و اولاد</p>
+					</div>
+				</div>
+			
+			</div>
+
+			<div class="col s12 m6 l3">
+				<div class="card grey lighten-4">
+					<div class="card-image">
+						<img src="/root/Desktop/scripts/samane/app/static/images/cardsicon/006-gear.svg">
+					</div>
+					<div class="card-content">
+						<p class="center-align">دوره های آموزشی</p>
+					</div>
+				</div>
+			
+			</div>
+
+			<div class="col s12 m6 l3">
+				<div class="card grey lighten-4">
+					<div class="card-image">
+						<img src="/root/Desktop/scripts/samane/app/static/images/cardsicon/007-layers.svg">
+					</div>
+					<div class="card-content">
+						<p class="center-align">احکام کارگزینی</p>
+					</div>
+				</div>
+			
+			</div>
 	</div>
-</div>
+	
+
 </body>
 </html>
 <style>
 
-@font-face {
-  font-family: Sahel;
-  src: url('./static/fonts/Sahel-Black.eot');
-  src: url('./static/fonts/Sahel-Blacl.eot?#iefix') format('embedded-opentype'),
-       url('./static/fonts/Sahel-Black.woff') format('woff'),
-       url('./static/fonts/Sahel-Black.ttf') format('truetype');
-  font-weight: 900;
-}
+	@font-face {
+	font-family: Sahel;
+	src: url('./static/fonts/Sahel-Black.eot');
+	src: url('./static/fonts/Sahel-Black.eot?#iefix') format('embedded-opentype'),
+		url('./static/fonts/Sahel-Black.woff') format('woff'),
+		url('./static/fonts/Sahel-Black.ttf') format('truetype');
+	font-weight: 900;
+	}
 </style>
