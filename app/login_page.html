@@ -28,7 +28,16 @@
 	  font-weight: normal;
 	}
 
-
+.flex {
+  display: flex;
+  
+  min-height: 100vh;  /*or use calc(100vh - header_height)*/
+  background-color: #F1F1F1;
+  margin-bottom: -30px
+}
+.input{
+	
+}
 	</style>
 
 	<title>سامانه</title>
@@ -40,11 +49,14 @@
 <body>
 	<div class="row">
 		<div class="hide-on-small-only">
-				<div class="col s9" style="background-color: #F1F1F1;margin-bottom: -20px;max-height: 100%">
+			<div class="flex">
+				<div class="col s4 offset-s8" style="background-color: white;">
+					<div style="padding-top: 50px">
+						<h3 style="font-family: Sahel-bold;color: #B7B7B7;" class="center-align">ورود</h3>
+					</div>
 				</div>
 			</div>
 		</div>
-	
-
+	</div>
 </body>
 </html>
