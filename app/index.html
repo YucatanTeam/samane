@@ -11,9 +11,34 @@
 					margin: 0 auto;
 				}
 		</style>
+		<style>
+			a.action-link {
+				border: 2px solid white;
+				border-radius: 5px;
+				font-family: Sahel; 
+				margin: 2%;
+				color: white;
+				text-align: center;
+			}
+			a.action-link:hover {
+				border: 1px solid #1492e6;
+				background-color: white;
+				color: #1492e6;
+				transition: 0.18s
+			}
+			p, a, span {
+				color: #707070;
+			}
+			a.action-close {
+				border: 2px solid white;
+				border-radius: 150px;
+				background-color: white;
+				padding-top: 4px;
+				text-align: center;
+			}
+		</style>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="./static/css/materialize.min.css">
-		<script scr="./static/js/jquery.js"></script>
 		<script src="./static/js/materialize.min.js"></script>
 				
 	</head>
@@ -35,30 +60,29 @@
 				</div>
 			</div>
 
-
-
-
-
-
-	<!-- TODO hidden / show onclick using jquery -->
-			<div class="col s12">
+			<div class="col s12" id="cardinfo" hidden>
 				<div class="card blue" style="direction:rtl; height: 250px; border-radius: 7px; margin-top: -10px; margin-bottom: 1px;">
 					<div class="card-content">
 						<div class="row">
-							<div class="hide-on-med-and-up" style="font-family: Sahel-bold">وضعیت ایثارگری</div>
-							<div class="col m8 l9 holder">
+							<div class="col s2 m2 l2 hide-on-small-only" style="padding-top: 17%; padding-right: 9%">
+								<a href="#!" id="actionclose" onclick=closeMe() class="action-close"><i class="tiny material-icons">chevron_right</i></a>
+							</div>
+							<div class="hide-on-med-and-up" style="font-family: Sahel-bold; font-size: 22px; color: white;">وضعیت ایثارگری</div>
+							<div class="col m7 l7 holder">
 								<div class="row">
-									<div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
-									<div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
-									<div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
-									<div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
+									<a href="#!" class="action-link col s12 m8 l3 truncate">افزایش حقوق سالانه</a>
+									<a href="#!" class="action-link col s12 m8 l3 truncate">احتساب سوابق خارج از دانشگاه</a>
+									<a href="#!" class="action-link col s12 m8 l3 truncate">پایه های تشویقی (هیئت علمی )</a>
 								</div>
 							</div>
-							<div class="col s12 m4 l3 holder hide-on-small-only" style="padding: 20px; max-width: 200px; max-height: 200px">
+							<div class="col s12 m3 l3 holder hide-on-small-only" style="padding: 20px; max-width: 200px; max-height: 200px">
 								<div class="card-image">
-									<img src="./static/images/cardsicon/003-document.svg">
-									<p class="align-center" style="font-family: Sahel-bold; margin-right: 10%; padding-top: 7%;">وضعیت ایثارگری</p>
+									<img src="./static/images/cardsiconrev/008-document.svg">
+									<p class="align-center" style="font-family: Sahel-black; font-size: 18px; margin-right: 10%; padding-top: 7%; color: white;">وضعیت ایثارگری</p>
 								</div>
+							</div>
+							<div class="col s12 hide-on-med-and-up">
+								<a href="#!" id="actionclose" onclick=closeMe() class="action-close"><i class="tiny material-icons">chevron_right</i></a>
 							</div>
 						</div>
 					</div>
@@ -67,68 +91,79 @@
 
 
 
-
-
-
-
-
-
+		<div id="cardsRow">
 			<div class="col s12 m6 l3">
-				<div class="card grey lighten-4 hoverable" style="border-radius: 7px;">
+				<div class="card grey lighten-4 hoverable" id="c1" onclick=dispatchInfo(1)  style="border-radius: 7px;">
 					<div class="holder" style="padding: 20px">
 						<div class="card-image">
 							<img src="./static/images/cardsicon/003-document.svg">
 						</div>
 					</div>
 					<div class="card-content">
-						<p class="center-align" style="font-family: Sahel-bold">وضعیت ایثارگری</p>
+						<p class="center-align" style="font-family: Sahel-black">وضعیت ایثارگری</p>
 					</div>
 				</div>
 			</div>
 			
 			<div class="col s12 m6 l3">
-				<div class="card grey lighten-4 hoverable" style="border-radius: 7px;">
+				<div class="card grey lighten-4 hoverable" id="c2" onclick=dispatchInfo(2)  style="border-radius: 7px;">
 					<div class="holder" style="padding: 20px">
 						<div class="card-image">
 							<img src="./static/images/cardsicon/005-avatar.svg">
 						</div>
 					</div>
 					<div class="card-content">
-						<p class="center-align" style="font-family: Sahel-bold">عائله مندی و اولاد</p>
+						<p class="center-align" style="font-family: Sahel-black">عائله مندی و اولاد</p>
 					</div>
 				</div>
 			
 			</div>
 
 			<div class="col s12 m6 l3">
-				<div class="card grey lighten-4 hoverable" style="border-radius: 7px;">
+				<div class="card grey lighten-4 hoverable" id="c3" onclick=dispatchInfo(3) style="border-radius: 7px;">
 					<div class="holder" style="padding: 20px">
 						<div class="card-image">
 							<img src="./static/images/cardsicon/006-gear.svg">
 						</div>
 					</div>
 					<div class="card-content">
-						<p class="center-align" style="font-family: Sahel-bold">دوره های آموزشی</p>
+						<p class="center-align" style="font-family: Sahel-black">دوره های آموزشی</p>
 					</div>
 				</div>
 			
 			</div>
 
 			<div class="col s12 m6 l3">
-				<div class="card grey lighten-4 hoverable" style="border-radius: 7px;">
+				<div class="card grey lighten-4 hoverable" id="c4" onclick=dispatchInfo(4) style="border-radius: 7px;">
 					<div class="holder" style="padding: 20px">
 						<div class="card-image">
 							<img src="./static/images/cardsicon/007-layers.svg">
 						</div>
 					</div>
 						<div class="card-content">
-						<p class="center-align" style="font-family: Sahel-bold">احکام کارگزینی</p>
+						<p class="center-align" style="font-family: Sahel-black">احکام کارگزینی</p>
 					</div>
 				</div>
 			
 			</div>
+		</div>
 	</div>
 	
+
+<script src="static/js/jquery.js"></script>
+<script>
+	function dispatchInfo(cid){
+		// TODO : fetch a card info from db with id : cid
+		$(`#cardinfo`).show("slow");
+		$(`#cardsRow`).hide("fast");
+	}
+
+	function closeMe(){
+		$(`#cardinfo`).hide(500);
+		$(`#cardsRow`).show("slow");
+	}
+
+</script>
 
 </body>
 </html>
@@ -144,9 +179,9 @@
 	}
 	@font-face {
   font-family: Sahel-bold;
-  src: url('./static/fonts/./static/fonts/./static/fonts/./static/fonts/Sahel-Bold.eot');
-  src: url('./static/fonts/./static/fonts/./static/fonts/Sahel-Bold.eot?#iefix') format('embedded-opentype'),
-       url('./static/fonts/./static/fonts/Sahel-Bold.woff') format('woff'),
+  src: url('./static/fonts/Sahel-Bold.eot');
+  src: url('./static/fonts/Sahel-Bold.eot?#iefix') format('embedded-opentype'),
+       url('./static/fonts/Sahel-Bold.woff') format('woff'),
        url('./static/fonts/Sahel-Bold.ttf') format('truetype');
   font-weight: bold;
 }
