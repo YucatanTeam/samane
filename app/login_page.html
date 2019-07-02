@@ -30,16 +30,20 @@
 
 .flex {
   display: flex; 
-  min-height: 100vh;  /*or use calc(100vh - header_height)*/
+  min-height: 100vh; 
   background-color: #F1F1F1;
-  margin-bottom: -30px
+  margin-bottom: -30px;
+
 }
-.input{
-	display: flex;
+
+input[type=text]:focus {
+  border: 3px solid #1492E6 !important ;
 }
-input.input:hover{
-	border-color: blue;
-	animation: color_change 1s;
+input[type=password]:focus {
+  border: 3px solid #1492E6 !important ;
+}
+textarea:focus, input:focus {
+    color: grey ;
 }
 	</style>
 
@@ -51,28 +55,22 @@ input.input:hover{
 </head>
 <body>
 	<div class="row">
-		<div class="hide-on-small-only">
-			<div class="flex">
-				<div class="col s4 offset-s8" style="background-color: white;">
-					<div style="padding-top: 50px">
-						<h3 style="font-family: Sahel;color: #B7B7B7;" class="center-align">ورود</h3>
-						<div class="divider"></div>
-					</div>
-				</div>
-			</div>
+		<div class="hide-on-med-and-down col l8 s12 full-width " style="background-color: red;min-width: 100vh">
+			<div></div>
+				
 		</div>
-		<div class="show-on-small-only">
+		<div class="col s12 m12 l4">
 			<div class="center-align">
-				<h3 style="font-family: Sahel-bold;color: #B7B7B7;" class="center-align">ورود</h3>
-				<div class="divider" style="margin-left: 70px;margin-right: 70px"></div>
+				<h3 style="font-family: Sahel;color: #B7B7B7;" class="center-align">ورود</h3>
+				<div class="divider" style="margin-left: 170px;margin-right: 170px" ></div>
 				<div class="row">
-    				<form class="col s12">
+    				<form class="col s12 m12">
     					<div class="row">
-    						<div class="input-field col s4 offset-s4">
-    							<input type="username" name="username" class="input">
-    						</div>
+    						<input type="text" name="username" placeholder="نام کاربری" style="width: 50%;text-align:center;margin: 50px 0;box-sizing: border-box;border: 2px solid #ccc;transition: 0.5s;outline: none;font-family: Sahel">
+    						<input type="password" name="password" placeholder="رمز عبور" style="width: 50%;text-align:center;margin: -15px 0;box-sizing: border-box;border: 2px solid #ccc;transition: 0.5s;outline: none;font-family: Sahel">
     					</div>
     				</form>
+    				<a class="btn blue white-text z-depth-0"style="font-family: Sahel">ورود</a>
     			</div>
 			</div>
 		</div>
