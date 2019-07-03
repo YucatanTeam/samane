@@ -48,7 +48,16 @@ input[type=text]:focus {
 				
 	</head>
 <body style="background-color: #E4E4E4" >
-	
+	<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">درخواست تصحیح اسناد</a></li>
+  <li><a href="#!">درخواست بررسی اسناد</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">درخواست بررسی </a></li>
+</ul>
+	<ul id="dropdown2" class="dropdown-content">
+
+  <li><a href="#!">خروج</a></li>
+</ul>
 	<nav style="background-color: #f5f5f5;">
 		<div class="nav-wrapper" style="margin-top: -20px">
 	<p></p>
@@ -65,8 +74,8 @@ input[type=text]:focus {
                 </div>
             </div>   
         </li>
-        <li><a href="#"><i class="material-icons icon-grey">account_circle</i></a></li>
-        <li><a href="#"><i class="material-icons icon-grey">notifications</i></a></li>   
+        <li><a href="#" class="dropdown-trigger" data-target="dropdown2"><i class="material-icons icon-grey">account_circle</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons icon-grey">notifications</a></li> 
       </ul>
 		</div>
 	</nav>
@@ -183,7 +192,15 @@ input[type=text]:focus {
 		$(`#cardinfo`).hide(500);
 		$(`#cardsRow`).show("slow");
 	}
-
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, { inDuration: 300,
+      outDuration: 225,
+      hover: false, // Activate on hover
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'right'});
+  });
 </script>
 
 </body>
