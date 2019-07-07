@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>پنل مدیریت</title>
+		<title>اطلاع رسانی </title>
 		<style>
 			h1 {
 				text-align: center;
@@ -35,12 +35,6 @@
 				padding-top: 4px;
 				text-align: center;
 			}
-			i.icon-grey {
-    			color: #707070;
-			}
-input[type=text]:focus {
-  border: 1px solid #1492E6 !important ;
-}
 		</style>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="./static/css/materialize.min.css">
@@ -48,44 +42,22 @@ input[type=text]:focus {
 				
 	</head>
 <body style="background-color: #E4E4E4" >
-	<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">درخواست تصحیح اسناد</a></li>
-  <li><a href="#!">درخواست بررسی اسناد</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">درخواست بررسی </a></li>
-</ul>
-	<ul id="dropdown2" class="dropdown-content">
-
-  <li><a href="./login_page.html">خروج</a></li>
-</ul>
+	
 	<nav style="background-color: #f5f5f5;">
 		<div class="nav-wrapper" style="margin-top: -20px">
-	<p></p>
-      <a href="#!" class="brand-logo"></a>
-      <ul class="right">
-        <li>                     
-        	<div class="center row">
-            	<div class="col s12 " >
-                    <div class="row" id="topbarsearch">
-                        <div class="input-field col s6 s12 red-text">
-                            <input type="text" id="search" placeholder="جستو جو" style="text-align: center;font-family: Sahel">
-                        </div>
-                    </div>
-                </div>
-            </div>   
-        </li>
-        <li><a href="#" class="dropdown-trigger" data-target="dropdown2" style="font-family: Sahel;color: grey">ناحیه کاربری</a></li>
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1" style="font-family: Sahel;color: grey">اطلاع رسانی</a></li> 
-      </ul>
+			<div class="row">
+				
+			</div>
 		</div>
 	</nav>
 
 	<div class="container">
 		<div class="row">
+			
 			<div class="col s12">
 				<div class="card grey lighten-4" style="height: 150px; border-radius: 6px;">
 					<div class="card-content">
-						<span class="card-title center-align" style="margin-top: 30px ;font-family: Sahel-Black">پنل مدیریت  </span>
+						<span class="card-title center-align" style="margin-top: 30px ;font-family: Sahel-Black">اطلاعات کاربری</span>
 					</div>
 				</div>
 			</div>
@@ -96,11 +68,11 @@ input[type=text]:focus {
 				<div class="card grey lighten-4 hoverable" id="c1" onclick=dispatchInfo(1)  style="border-radius: 7px;">
 					<div class="holder" style="padding: 20px">
 						<div class="card-image">
-							<img src="./static/images/cardsicon/004-folder.svg">
+							<img src="./static/images/cardsicon/003-document.svg">
 						</div>
 					</div>
 					<div class="card-content">
-						<p class="center-align" style="font-family: Sahel-black">افزودن سند</p>
+						<p class="center-align" style="font-family: Sahel-black">وضعیت ایثارگری</p>
 					</div>
 				</div>
 			</div>
@@ -109,26 +81,49 @@ input[type=text]:focus {
 				<div class="card grey lighten-4 hoverable" id="c2" onclick=dispatchInfo(2)  style="border-radius: 7px;">
 					<div class="holder" style="padding: 20px">
 						<div class="card-image">
-							<img src="./static/images/cardsicon/008-calculator.svg">
+							<img src="./static/images/cardsicon/005-avatar.svg">
 						</div>
 					</div>
 					<div class="card-content">
-						<p class="center-align" style="font-family: Sahel-black">مدیریت اسناد</p>
+						<p class="center-align" style="font-family: Sahel-black">عائله مندی و اولاد</p>
 					</div>
 				</div>
 			
 			</div>
 
+			<div class="col s12 m6 l3">
+				<div class="card grey lighten-4 hoverable" id="c3" onclick=dispatchInfo(3) style="border-radius: 7px;">
+					<div class="holder" style="padding: 20px">
+						<div class="card-image">
+							<img src="./static/images/cardsicon/006-gear.svg">
+						</div>
+					</div>
+					<div class="card-content">
+						<p class="center-align" style="font-family: Sahel-black">دوره های آموزشی</p>
+					</div>
+				</div>
+			
+			</div>
 
-
+			<div class="col s12 m6 l3">
+				<div class="card grey lighten-4 hoverable" id="c4" onclick=dispatchInfo(4) style="border-radius: 7px;">
+					<div class="holder" style="padding: 20px">
+						<div class="card-image">
+							<img src="./static/images/cardsicon/007-layers.svg">
+						</div>
+					</div>
+						<div class="card-content">
+						<p class="center-align" style="font-family: Sahel-black">احکام کارگزینی</p>
+					</div>
+				</div>
+			
+			</div>
 		</div>
 	</div>
 	
 
 <script src="static/js/jquery.js"></script>
 <script>
-
-  
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems, { inDuration: 300,
@@ -145,6 +140,7 @@ input[type=text]:focus {
    document.getElementById('search').click();
   }
 });
+
 </script>
 
 </body>

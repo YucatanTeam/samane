@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>پنل مدیریت</title>
+		<title>نتایج جستو و جو</title>
 		<style>
 			h1 {
 				text-align: center;
@@ -56,7 +56,7 @@ input[type=text]:focus {
 </ul>
 	<ul id="dropdown2" class="dropdown-content">
 
-  <li><a href="./login_page.html">خروج</a></li>
+  <li><a href="./login_page.html" >خروج</a></li>
 </ul>
 	<nav style="background-color: #f5f5f5;">
 		<div class="nav-wrapper" style="margin-top: -20px">
@@ -68,6 +68,7 @@ input[type=text]:focus {
             	<div class="col s12 " >
                     <div class="row" id="topbarsearch">
                         <div class="input-field col s6 s12 red-text">
+
                             <input type="text" id="search" placeholder="جستو جو" style="text-align: center;font-family: Sahel">
                         </div>
                     </div>
@@ -76,6 +77,7 @@ input[type=text]:focus {
         </li>
         <li><a href="#" class="dropdown-trigger" data-target="dropdown2" style="font-family: Sahel;color: grey">ناحیه کاربری</a></li>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1" style="font-family: Sahel;color: grey">اطلاع رسانی</a></li> 
+        	<a class="dropdown-trigger" href="./panel.html" ></a>
       </ul>
 		</div>
 	</nav>
@@ -85,50 +87,31 @@ input[type=text]:focus {
 			<div class="col s12">
 				<div class="card grey lighten-4" style="height: 150px; border-radius: 6px;">
 					<div class="card-content">
-						<span class="card-title center-align" style="margin-top: 30px ;font-family: Sahel-Black">پنل مدیریت  </span>
+						<span class="card-title center-align" style="margin-top: 30px ;font-family: Sahel-Black">نتایج</span>
 					</div>
 				</div>
 			</div>
 
 
-		<div id="cardsRow">
 			<div class="col s12 m6 l3">
-				<div class="card grey lighten-4 hoverable" id="c1" onclick=dispatchInfo(1)  style="border-radius: 7px;">
-					<div class="holder" style="padding: 20px">
-						<div class="card-image">
-							<img src="./static/images/cardsicon/004-folder.svg">
-						</div>
-					</div>
+				<div class="card grey lighten-4 hoverable" id="c2" onclick="location.href='./index.html'"  style="border-radius: 7px;">
+
 					<div class="card-content">
-						<p class="center-align" style="font-family: Sahel-black">افزودن سند</p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col s12 m6 l3">
-				<div class="card grey lighten-4 hoverable" id="c2" onclick=dispatchInfo(2)  style="border-radius: 7px;">
-					<div class="holder" style="padding: 20px">
-						<div class="card-image">
-							<img src="./static/images/cardsicon/008-calculator.svg">
-						</div>
-					</div>
-					<div class="card-content">
-						<p class="center-align" style="font-family: Sahel-black">مدیریت اسناد</p>
+						<span class="card-title" style="font-family: Sahel-bold;text-align: center;">
+							فاطمه گودرزی
+						</span>
+						<p class="center-align" style="font-family: Sahel">حوزه فعالیت: بایگانی</p>
+						
 					</div>
 				</div>
 			
 			</div>
-
-
-
-		</div>
-	</div>
-	
-
+</div></div>
+		
 <script src="static/js/jquery.js"></script>
 <script>
 
-  
+
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems, { inDuration: 300,
@@ -140,7 +123,7 @@ input[type=text]:focus {
   var input = document.getElementById('search');
   input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
- 	input.setAttribute("onclick", "location.href='./result_page.html'")
+ 	input.setAttribute("onclick", "location.href='./login_page.html'")
    event.preventDefault();
    document.getElementById('search').click();
   }
