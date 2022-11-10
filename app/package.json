@@ -14,7 +14,7 @@
   "author": "YucatanTeam",
   "license": "MIT",
   "devDependencies": {
-    "electron": "5.0.6"
+    "electron": "18.3.7"
   },
   "dependencies": {
     "electron-reload": "^1.4.0"
